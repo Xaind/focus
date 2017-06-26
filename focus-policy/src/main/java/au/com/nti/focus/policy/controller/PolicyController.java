@@ -37,7 +37,7 @@ public class PolicyController {
 	}
 
 	@DeleteMapping("/{id}")
-	public void deleteMethod(@PathVariable Long id) {
+	public void deletePolicy(@PathVariable Long id) {
 		policyService.deletePolicy(id);
 	}
 
