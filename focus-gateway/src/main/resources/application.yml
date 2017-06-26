@@ -1,0 +1,17 @@
+server:  
+  port: 8071
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8070/eureka}
+
+zuul:
+  ignoredServices: '*'
+  routes:
+    focus-policy:
+      path: /policies/**
+      stripPrefix: false
+    focus-claim: 
+      path: /claims/**
+      stripPrefix: false
